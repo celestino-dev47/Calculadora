@@ -1,0 +1,164 @@
+
+  /*RESET*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #0F172A;
+  }
+  
+  #conf {
+    margin: 2rem;
+  }
+  
+  #conf li {
+    margin: 0.2rem;
+    list-style-type: none;
+    gap: 5px;
+  }
+  
+  #conf a {
+    text-decoration: none;
+  }
+  
+  #conf button {
+    padding: 5px;
+    color: red;
+    background-color: transparent;
+    border: 1px solid #1e293b;
+  }
+  
+  .calculator {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    opacity: 0;
+    animation: showup 1s ease forwards;
+  }
+  
+  #ipt {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  #display {
+    font-size: 150%;
+    width: 100%;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #f9f5f799;
+    background-color: transparent;
+  }
+  
+  #display[type="text"] {
+    color: white;
+    padding: 1rem;
+  }
+  
+  #delete {
+    padding: 0.8rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    font-size: 130%;
+    background-color: transparent;
+    color: red;
+    width: 60px;
+    height: 60px;
+    transition: background-color 0.1s, border 0.1s, border-radius 0.1s;
+  }
+  
+  .calc {
+    margin: 0.8rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    flex-grow: 2;
+  }
+  
+  .numbers button {
+    color: #F8FAFC;
+    font-size: 150%;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: #1E293B;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+    width: 64px;
+    height: 64px;
+    transition: background-color 0.1s, border 0.1s, border-radius 0.1s;
+  }
+  
+  .numbers button:active {
+    background-color: #777;
+  }
+  
+  .operadores button:active, #delete:active, #equal:active {
+    background-color: #F8FAFC77;
+    border: 1px solid #ffffff99;
+    border-radius: 50%;
+  }
+  
+  .operadores {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+  
+  .operadores button {
+    background-color: #38BDF8;
+    font-size: 150%;
+    border: 1px solid white;
+    border-radius: 50%;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(0, 180, 255, 0.3);
+    color: #F8FAFC;
+    width: 64px;
+    height: 64px;
+    transition: background-color 0.1s;
+    transform-origin: center;
+  }
+  
+  #equal {
+    background-color: #22C55E;
+    font-size: 150%;
+    color: #F8FAFC;
+    right: 0;
+    height: 64px;
+    width: 64px;
+    border: 1px solid transparent;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(0, 255, 100, 0.3);
+    border-radius: 50%;
+    transition: background-color 0.1s, border 0.1s, border-radius 0.1s;
+  }
+  
+  #AC {
+    color: red;
+    background-color: transparent;
+  }
+  
+  @keyframes showup {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }

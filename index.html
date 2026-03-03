@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+<head>
+  <title>Calculadora</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--Primeira Divisão-->
+  <div id="conf">
+    <details>
+      <summary>Configurações</summary>
+      <ul>
+        <li>
+          <button onclick="alternarTema()" id="btn2">Mudar Tema</button>
+        </li>
+        <li>
+          <a href="#">Sobre</a>
+        </li>
+        <li>
+          <a href="#">Contacto</a>
+        </li>
+        <li>
+          <a href="#">Como Utilizar</a>
+        </li>
+      </ul>
+    </details>
+  </div>
+  <div class="calculator">
+   <div id="ipt">
+     <button id="delete" value="⌫">⌫</button>
+     <input type="text" id="display" disabled>
+   </div>
+   <div class="calc">
+   <div class="numbers">
+     <button value="1">1</button>
+     <button value="2">2</button>
+     <button value="3">3</button>
+     <button value="4">4</button>
+     <button value="5">5</button>
+     <button value="6">6</button>
+     <button value="7">7</button>
+     <button value="8">8</button>
+     <button value="9">9</button>
+     <button id="AC" value="C">C</button>
+     <button value="0">0</button>
+    <button id="equal" value="=">=</button>
+  </div>
+
+   <div class="operadores">
+    <button value="÷">÷</button>
+    <button value="*">×</button>
+    <button value="-">-</button>
+    <button value="+">+</button>
+   </div>
+   <div>
+     
+   </div>
+  </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
