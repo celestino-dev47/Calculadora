@@ -1,0 +1,223 @@
+  /*====RESET====*/
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /*=====Estilização=====*/
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: transparent;
+  }
+  
+  body.dark {
+    background-color: #121212;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px;
+  }
+  
+  .bar {
+    display: flex;
+    margin: 1rem 0rem;
+    gap: 10px;
+    opacity: 0;
+    animation: showup 1.2s ease forwards;
+  }
+  
+  .bar #display {
+    width: 90%;
+    border: none;
+    font-size: 22px;
+    color: black;
+    border-bottom: 2px solid #777;
+    padding: 10px 0px;
+    background-color: transparent;
+  }
+  
+  .bar #display.dark {
+    color: white;
+  }
+  
+  .bar #delete {
+    font-size: 32px;
+    background-color: transparent;
+    border: none;
+    transition: transform 0.2s opacity 0.2s color 0.2s;
+  }
+  
+  .bar #delete:hover {
+    transform: translateY(-4px);
+  }
+  
+  .bar #delete:active {
+    opacity: 0.5;
+    color: #777;
+  }
+  
+  .bar #delete.dark {
+    color: white;
+  }
+  
+  .calculator {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  
+  .numbers button {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: opacity 0.2s transform 0.2s;
+    opacity: 0;
+    animation: showup 1.4s ease forwards;
+    animation-delay: 0.2s;
+  }
+  
+  .numbers button:hover, .operadores button:hover {
+    transform: scale(1.08);
+  }
+  
+  .numbers button:active,  .operadores button:active {
+    opacity: 0.2;
+  }
+  
+  .numbers #AC {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .numbers #equal {
+    color: #09ff2d;
+    font-weight: bold;
+  }
+  
+  .numbers button.dark {
+    color: white;
+    background-color: #333;
+  }
+  
+  .operadores {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 8px;
+  }
+  
+  .operadores button {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #04adf4;
+    opacity: 0;
+    animation: showup 1.6s ease forwards;
+    animation-delay: 0.4s;
+  }
+  
+  .operadores button.dark {
+    background-color: #333;
+  }
+  
+  .footer{
+    margin-top:50px;
+    padding:20px;
+    text-align:center;
+    border-top:1px solid rgba(0,0,0,0.7);
+    font-size:14px;
+    animation: showup 1.2s ease forwards;
+  }
+  
+  .footer.dark {
+    border-top:1px solid rgba(255,255,255,0.1);
+    color: white;
+  }
+
+  .footer-links{
+    margin:10px 0;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap: wrap;
+  }
+  
+  #change {
+    padding: 5px;
+    margin: 10px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #989898;
+  }
+
+  .autor{
+    opacity:0.6;
+    font-size:12px;
+  }
+  
+  @keyframes showup {
+      from {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+  
+  @media (min-width: 768px) {
+    
+    .bar {
+      margin: 1.6rem 0rem;
+    }
+    
+    .bar #display {
+      width: 690px;
+    }
+    
+    .numbers {
+      gap: 15px;
+    }
+    
+    .operadores {
+      gap: 15px;
+    }
+    
+    .numbers button {
+      width: 180px;
+      height: 180px;
+      font-size: 48px;
+      border: 1px solid transparent;
+      border-radius: 50%;
+    }
+    
+    .operadores button {
+      width: 180px;
+      height: 180px;
+      font-size: 48px;
+      border: 1px solid transparent;
+      border-radius: 50%;
+    }
+  }
